@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GetBonus from "./components/Desktop/GetBonus";
+import LogoSection from "./components/Desktop/LogoSection";
+import MobileLogoSection from "./components/Mobile/MobileLogoSection";
+import Vote from "./components/Desktop/Vote";
+import WelcomeBonus from "./components/Desktop/WelcomeBonus";
+import MobileVoteSection from "./components/Mobile/MobileVoteSection";
+import MobileWelcomeBonus from "./components/Mobile/MobileWelcomeBonus";
+import MobileGetBonusSection from "./components/Mobile/MobileGetBonusSection";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="desktop-section">
+        <LogoSection />
+        <WelcomeBonus />
+        <Vote />
+        <GetBonus />
+      </div>
+      <div className="mobile-section">
+        <div className="mobile-left">
+          <MobileLogoSection />
+          <MobileVoteSection />
+        </div>
+        <div className="mobile-right">
+          <MobileWelcomeBonus />
+          <MobileGetBonusSection />
+        </div>
+      </div>
     </div>
   );
 }
